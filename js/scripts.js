@@ -1,5 +1,4 @@
 //business logic:
-//business logic:
 function Player(name, roll, turnTotal, gameTotal) {
   this.name = name;
   this.roll = roll;
@@ -14,6 +13,11 @@ function Player(name, roll, turnTotal, gameTotal) {
     }
   }
   this.gameTotal = gameTotal;
+  this.winner = function() {
+    if (this.gameTotal >= 10) {
+      alert(this.name + ", YOU WINNNNN");
+    }
+  }
 };
 
 var newPlayer1;
@@ -29,10 +33,15 @@ $(document).ready(function(){
     $(".info").hide();
     $(".game").show();
     $("#submitName").hide();
+    $("#instructionsTitle").show();
     $("h3#player1Name").text(name1);
     $("h3#player2Name").text(name2);
     newPlayer1 = new Player(name1, 0, 0, 0);
     newPlayer2 = new Player(name2, 0, 0, 0);
+  });
+
+  $("#instructionsTitle").click(function(){
+    $("#instructions").toggle();
   });
 
   $("#player1-roll").click(function() {
@@ -56,6 +65,7 @@ $(document).ready(function(){
 
   $("#player1-hold").click(function(){
     newPlayer1.gameTotal += newPlayer1.turnTotal;
+    newPlayer1.winner(newPlayer1.gameTotal);
     newPlayer1.turnTotal = 0;
     newPlayer1.roll = 0;
     $("#p1TurnTotal").text("Turn: " + newPlayer1.turnTotal);
@@ -65,6 +75,7 @@ $(document).ready(function(){
 
   $("#player2-hold").click(function(){
     newPlayer2.gameTotal += newPlayer2.turnTotal;
+    newPlayer2.winner(newPlayer2.gameTotal);
     newPlayer2.turnTotal = 0;
     newPlayer2.roll = 0;
     $("#p2TurnTotal").text("Turn: " + newPlayer2.turnTotal);

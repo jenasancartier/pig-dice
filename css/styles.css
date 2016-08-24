@@ -1,5 +1,9 @@
-h3 {
+h4 {
   padding-bottom: 75px;
+}
+
+ol {
+  text-align: left;
 }
 
 .game {
@@ -7,7 +11,6 @@ h3 {
 }
 
 .col-sm-4 {
-  border: solid black;
   padding: 40px;
   padding-bottom: 70px;
 }
@@ -26,6 +29,25 @@ h3 {
   display: block;
   margin: auto;
   padding: 30px;
+}
+
+#instructionsTitle {
+  display: none;
+  padding: 10px;
+}
+
+#instructionsTitle:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  color: #0088cc;
+}
+
+#instructionTitle:visited {
+  color: white;
+}
+
+#instructions {
+  display: none;
 }
 
 #player1-roll, #player2-roll {
