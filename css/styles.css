@@ -18,6 +18,7 @@ ol {
 .jumbotron {
   text-align: center;
   margin-top: 20px;
+  background-color: lavender;
 }
 
 .row {
@@ -42,10 +43,6 @@ ol {
   color: #0088cc;
 }
 
-#instructionTitle:visited {
-  color: white;
-}
-
 #instructions {
   display: none;
 }
@@ -58,6 +55,12 @@ ol {
 #player1-hold, #player2-hold {
   float: right;
   margin-right: 50px;
+}
+
+.border {
+  border: solid #0088cc;
+  border-radius: 30px;
+  border-style: groove;
 }
 
 h4#p1RollTotal, h4#p2RollTotal {

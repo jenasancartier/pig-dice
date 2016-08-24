@@ -14,7 +14,7 @@ function Player(name, roll, turnTotal, gameTotal) {
   }
   this.gameTotal = gameTotal;
   this.winner = function() {
-    if (this.gameTotal >= 10) {
+    if (this.gameTotal >= 100) {
       alert(this.name + ", YOU WINNNNN");
     }
   }
