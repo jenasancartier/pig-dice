@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <title>Pig</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1>pig dice game</h1>
+      </div>
+      <form class="form-group">
+        <div class="row">
+          <div class="col-sm-4 col-sm-offset-2">
+            <div class="info">
+              <label for="name1">Enter your name:</label>
+              <input type="text" class="form-control" id="name1">
+            </div>
+            <div class="game">
+              <h3 id="player1Name"></h3>
+              <button type="button" class="btn btn-lg btn-success" id="player1-roll">Roll</button>
+              <button type="button" class="btn btn-lg btn-danger" id="player1-hold">Hold</button>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="info">
+              <label for="name2">Enter your name:</label>
+              <input type="text" class="form-control" id="name2">
+            </div>
+            <div class="game">
+              <h3 id="player2Name"></h3>
+              <button type="button" class="btn btn-lg btn-success" id="player2-roll">Roll</button>
+              <button type="button" class="btn btn-lg btn-danger" id="player2-hold">Hold</button>
+            </div>
+          </div>
+        </div>
+      <hr>
+      <button type="submit" class="btn btn-lg btn-primary" id="submitName">Let's play!</button>
+      </form>
+    </div>
+  </body>
+</html>
