@@ -3,8 +3,14 @@ function Player(name, roll, turnTotal, gameTotal) {
   this.name = name;
   this.roll = roll;
   this.turnTotal = turnTotal;
-  this.addRoll = function(number) {
-    return this.turnTotal += number;
+  this.addRoll = function(roll) {
+    if (roll === 1) {
+      this.turnTotal = 0;
+      this.gameTotal += 1;
+      alert("You rolled a 1! Next player's turn.");
+    } else {
+      this.turnTotal += roll;
+    }
   }
   this.gameTotal = gameTotal;
 };
@@ -32,7 +38,7 @@ $(document).ready(function(){
     var roll = (Math.floor(Math.random() * 6) + 1);
     newPlayer1.roll = roll
     newPlayer1.addRoll(roll);
-    console.log("roll = " + newPlayer1.roll);
+    console.log("roll = " + newPlayer1.roll + ", total = " + newPlayer1.turnTotal);
   });
 
   $("#player2-roll").click(function(){
@@ -40,6 +46,16 @@ $(document).ready(function(){
     newPlayer2.roll = roll;
     newPlayer2.addRoll(roll);
     console.log(newPlayer2.roll);
+  });
+
+  $("#player1-hold").click(function(){
+    newPlayer1.gameTotal += newPlayer1.turnTotal;
+    newPlayer1.turnTotal = 0;
+  });
+
+  $("#player2-hold").click(function(){
+    newPlayer2.gameTotal += newPlayer2.turnTotal;
+    newPlayer2.turnTotal = 0;
   });
 
 });
