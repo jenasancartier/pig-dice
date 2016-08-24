@@ -1,4 +1,5 @@
 //business logic:
+//business logic:
 function Player(name, roll, turnTotal, gameTotal) {
   this.name = name;
   this.roll = roll;
@@ -56,12 +57,18 @@ $(document).ready(function(){
   $("#player1-hold").click(function(){
     newPlayer1.gameTotal += newPlayer1.turnTotal;
     newPlayer1.turnTotal = 0;
+    newPlayer1.roll = 0;
+    $("#p1TurnTotal").text("Turn: " + newPlayer1.turnTotal);
+    $("#p1RollTotal").text("Roll: " + newPlayer1.roll);
     $("#p1GameTotal").text("Game total: " + newPlayer1.gameTotal);
   });
 
   $("#player2-hold").click(function(){
     newPlayer2.gameTotal += newPlayer2.turnTotal;
     newPlayer2.turnTotal = 0;
+    newPlayer2.roll = 0;
+    $("#p2TurnTotal").text("Turn: " + newPlayer2.turnTotal);
+    $("#p2RollTotal").text("Roll: " + newPlayer2.roll);
     $("#p2GameTotal").text("Game total: " + newPlayer2.gameTotal);
   });
 
