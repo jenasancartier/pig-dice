@@ -2,6 +2,11 @@
   display: none;
 }
 
+.col-sm-5 {
+  /*border: solid black;*/
+  padding: 15px;
+}
+
 .jumbotron {
   text-align: center;
   margin-top: 20px;
@@ -15,4 +20,14 @@
   margin-top: 15px;
   display: block;
   margin: auto;
+}
+
+#player1-roll, #player2-roll {
+  float: left;
+  margin-left: 50px;
+}
+
+#player1-hold, #player2-hold {
+  float: right;
+  margin-right: 50px;
 }
