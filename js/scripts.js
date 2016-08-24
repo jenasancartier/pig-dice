@@ -41,6 +41,7 @@ $(document).ready(function(){
   });
 
   $("#instructionsTitle").click(function(){
+    $("#dice-gif").toggle();
     $("#instructions").toggle();
   });
 

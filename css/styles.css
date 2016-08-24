@@ -1,5 +1,17 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+  font-family: 'Baloo Chettan', cursive;
+}
+
 h4 {
   padding-bottom: 75px;
+}
+
+h3 {
+  padding-bottom: 25px;
 }
 
 ol {
@@ -18,7 +30,8 @@ ol {
 .jumbotron {
   text-align: center;
   margin-top: 20px;
-  background-color: lavender;
+  background-color: lightpink;
+  color: white;
 }
 
 .row {
@@ -40,7 +53,7 @@ ol {
 #instructionsTitle:hover {
   cursor: pointer;
   text-decoration: underline;
-  color: #0088cc;
+  color: salmon;
 }
 
 #instructions {
@@ -58,9 +71,13 @@ ol {
 }
 
 .border {
-  border: solid #0088cc;
+  border: solid lightpink;
   border-radius: 30px;
-  border-style: groove;
+  border-style: solid;
+}
+
+img {
+  max-width: 250px;
 }
 
 h4#p1RollTotal, h4#p2RollTotal {
