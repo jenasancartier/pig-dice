@@ -39,23 +39,30 @@ $(document).ready(function(){
     newPlayer1.roll = roll
     newPlayer1.addRoll(roll);
     console.log("roll = " + newPlayer1.roll + ", total = " + newPlayer1.turnTotal);
+    $("#p1RollTotal").text("Roll: " + newPlayer1.roll);
+    $("#p1TurnTotal").text("Turn: " + newPlayer1.turnTotal);
+    $("#p1GameTotal").text("Game total: " + newPlayer1.gameTotal);
   });
 
   $("#player2-roll").click(function(){
     var roll = (Math.floor(Math.random() * 6) + 1);
     newPlayer2.roll = roll;
     newPlayer2.addRoll(roll);
-    console.log(newPlayer2.roll);
+    $("#p2RollTotal").text("Roll: " + newPlayer2.roll);
+    $("#p2TurnTotal").text("Turn: " + newPlayer2.turnTotal);
+    $("#p2GameTotal").text("Game total: " + newPlayer2.gameTotal);
   });
 
   $("#player1-hold").click(function(){
     newPlayer1.gameTotal += newPlayer1.turnTotal;
     newPlayer1.turnTotal = 0;
+    $("#p1GameTotal").text("Game total: " + newPlayer1.gameTotal);
   });
 
   $("#player2-hold").click(function(){
     newPlayer2.gameTotal += newPlayer2.turnTotal;
     newPlayer2.turnTotal = 0;
+    $("#p2GameTotal").text("Game total: " + newPlayer2.gameTotal);
   });
 
 });

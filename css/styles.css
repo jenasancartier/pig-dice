@@ -37,3 +37,21 @@ h3 {
   float: right;
   margin-right: 50px;
 }
+
+h4#p1RollTotal, h4#p2RollTotal {
+  padding: 15px;
+  margin-left: 40px;
+  clear: both;
+  float: left;
+}
+
+h4#p1TurnTotal, h4#p2TurnTotal {
+  padding: 15px;
+  margin-right: 40px;
+  float: right;
+}
+
+h3#p1GameTotal, h3#p2GameTotal {
+  padding: 15px;
+  clear: both;
+}
