@@ -9,7 +9,7 @@ function Player(name, roll, turnTotal, gameTotal) {
       alert(this.name + ", YOU WINNNNN!");
     }
   }
-};
+}
 
 Player.prototype.hold = function(){
   this.gameTotal += this.turnTotal;
@@ -27,6 +27,7 @@ Player.prototype.addRoll = function(roll) {
   if (roll === 1) {
     this.turnTotal = 0;
     alert("You rolled a 1! Next player's turn.");
+
   } else {
     this.turnTotal += roll;
   }
@@ -37,6 +38,7 @@ var newPlayer2;
 
 //user interface logic:
 $(document).ready(function(){
+
   $("form").submit(function(event){
     event.preventDefault();
     var name1 = $("#name1").val();
@@ -77,11 +79,10 @@ $(document).ready(function(){
   $("#player1-hold").click(function(){
     newPlayer1.hold();
     $("#player1-hold, #player1-roll").prop('disabled', true);
-    $("#player2-hold, #player2-roll").prop('disabled', false);
+    $("#player2-hold, #player2-roll, #computer-turn").prop('disabled', false);
     $("#p1TurnTotal").text("Turn: " + newPlayer1.turnTotal);
     $("#p1RollTotal").text("Roll: " + newPlayer1.roll);
     $("#p1GameTotal").text("Game total: " + newPlayer1.gameTotal);
-
   });
 
   $("#player2-hold").click(function(){
@@ -94,9 +95,13 @@ $(document).ready(function(){
   });
 
   $("#computer-turn").click(function(){
-debugger;
-    while (newPlayer2.roll !== 1) {
-      if (newPlayer2.gameTotal + newPlayer2.turnTotal >= 100) {
+    debugger;
+    while (newPlayer2.turnTotal <= 10) {
+      if (newPlayer2.roll === 1) {
+         newPlayer2.turnTotal = 0;
+         newPlayer2.roll = 0;
+         break;
+      } else if (newPlayer2.gameTotal + newPlayer2.turnTotal >= 100) {
         newPlayer2.hold();
         break;
       } else if (newPlayer2.turnTotal >= 10) {
@@ -108,7 +113,8 @@ debugger;
       }
       console.log("Roll: " + newPlayer2.roll + " TT: " + newPlayer2.turnTotal);
     }
-
+    $("#player2-hold, #player2-roll, #computer-turn").prop('disabled', true);
+    $("#player1-hold, #player1-roll").prop('disabled', false);
     $("#p2RollTotal").text("Roll: " + newPlayer2.roll);
     $("#p2TurnTotal").text("Turn: " + newPlayer2.turnTotal);
     $("#p2GameTotal").text("Game total: " + newPlayer2.gameTotal);
