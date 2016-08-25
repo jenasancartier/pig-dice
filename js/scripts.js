@@ -6,7 +6,7 @@ function Player(name, roll, turnTotal, gameTotal) {
   this.gameTotal = gameTotal;
   this.winner = function() {
     if (this.gameTotal >= 100) {
-      alert(this.name + ", YOU WINNNNN!");
+      alert(this.name + ", you win!!!");
     }
   }
 }
@@ -26,8 +26,6 @@ Player.prototype.rollRandom = function(){
 Player.prototype.addRoll = function(roll) {
   if (roll === 1) {
     this.turnTotal = 0;
-    alert("You rolled a 1! Next player's turn.");
-
   } else {
     this.turnTotal += roll;
   }
@@ -103,8 +101,7 @@ $(document).ready(function(){
   });
 
   $("#computer-turn").click(function(){
-    debugger;
-    while (newPlayer2.turnTotal <= 10) {
+    while (newPlayer2.turnTotal <= 100) {
       if (newPlayer2.roll === 1) {
          newPlayer2.turnTotal = 0;
          newPlayer2.roll = 0;
