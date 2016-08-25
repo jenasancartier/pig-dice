@@ -46,6 +46,10 @@ ol {
   padding: 30px;
 }
 
+#middle-column {
+  margin-top: -45px;
+}
+
 #instructionsTitle {
   display: none;
   padding: 10px;
