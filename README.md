@@ -13,3 +13,12 @@
 <!-- * It will alert the user when their turn is over.
   * Input: 1
   * Output: Next player's turn. -->
+
+
+A.I.
+* A.I. will activate the roll button when human player has clicked hold.
+* It will roll when human player rolls a 1.
+* It will roll three times and then hold.
+* If it is behind, it will roll until the turn total + its game total is greater than the opponent's game total.
+* If it is within 15 points of winning, it will roll until it can win.
+* 
