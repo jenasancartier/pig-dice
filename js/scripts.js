@@ -62,6 +62,10 @@ $(document).ready(function(){
 
   $("#player1-roll").click(function() {
     newPlayer1.rollRandom();
+    if (newPlayer1.roll === 1) {
+      $("#player1-hold, #player1-roll").prop('disabled', true);
+      $("#player2-hold, #player2-roll, #computer-turn").prop('disabled', false);
+    }
     newPlayer1.addRoll(newPlayer1.roll);
     $("#p1RollTotal").text("Roll: " + newPlayer1.roll);
     $("#p1TurnTotal").text("Turn: " + newPlayer1.turnTotal);
@@ -70,6 +74,10 @@ $(document).ready(function(){
 
   $("#player2-roll").click(function(){
     newPlayer2.rollRandom();
+    if (newPlayer2.roll === 1) {
+      $("#player2-hold, #player2-roll").prop('disabled', true);
+      $("#player1-hold, #player1-roll").prop('disabled', false);
+    }
     newPlayer2.addRoll(newPlayer2.roll);
     $("#p2RollTotal").text("Roll: " + newPlayer2.roll);
     $("#p2TurnTotal").text("Turn: " + newPlayer2.turnTotal);
