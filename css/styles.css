@@ -25,6 +25,7 @@ ol {
 .col-sm-4 {
   padding: 40px;
   padding-bottom: 70px;
+  min-height: 420px;
 }
 
 .jumbotron {
@@ -96,4 +97,11 @@ h4#p1TurnTotal, h4#p2TurnTotal {
 h3#p1GameTotal, h3#p2GameTotal {
   padding: 15px;
   clear: both;
+}
+
+#computer-turn {
+  display: none;
+  float: right;
+  margin-right: 85px;
+  margin-top: -50px;
 }
