@@ -1,4 +1,4 @@
-# [For Sale](https://jenasancartier.github.io/pig-dice/)
+# [Pig Dice](https://jenasancartier.github.io/pig-dice/)
 ![project screenshot](/img/screenshot.png)
 ![project screenshot](/img/screenshot2.png)
 
