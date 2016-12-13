@@ -8,7 +8,7 @@ __Version 1: August 2016__
 ### Description
 A game of pig dice created with JavaScript. Includes a computer player option.
 
-# Behavior Driven Development
+## Behavior Driven Development
 * Program will generate random numbers between 1 and 6.
   * Input: click
   * Output: 4
